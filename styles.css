@@ -167,10 +167,10 @@ body {
   line-height: 28px;
   text-align: center;
   text-shadow:
-    -1px -1px 0 #3f1010,
-    1px -1px 0 #3f1010,
-    -1px 1px 0 #3f1010,
-    1px 1px 0 #3f1010;
+    -1px -1px 0 #ffdf00,
+    1px -1px 0 #ffdf00,
+    -1px 1px 0 #ffdf00,
+    1px 1px 0 #ffdf00;
 }
 
 .leaflet-popup-content {

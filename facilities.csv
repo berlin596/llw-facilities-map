@@ -1,0 +1,8 @@
+Name,LLW Classes,Public or Private,Compacts,Notes,Latitude,Longitude
+Barnwell Waste Management Facility,"A, B, C",Public*,Atlantic,"*Owned by the State of South Carolina, operated by Chem-Nuclear Systems (EnergySolutions subsidiary)",33.2449,-81.6624
+U.S. Ecology Washington,"A, B, C",Public,"Northwest, Rocky Mountain",Located on the Hanford Site,46.3676,-119.5185
+EnergySolutions Clive Operations,A,Private,All US Regions,,40.5317,-113.0469
+Area 5 Radioactive Waste Management Complex,Specialized DOE,Public,All US Regions (DOE-approved only),Must be DOE-related or otherwise approved under the NNSS Waste Acceptance Criteria,36.9673,-116.0528
+E-Area Low-Level Waste Facility – Savannah River Site,Specialized DOE,Public,None,Only DOE-controlled waste,33.2889,-81.6637
+Texas Compact Waste Disposal Facility – WCS,"A, B, C",Public (operated privately),Texas Compact,"Principally Texas and Vermont, but approved waste may be accepted by Texas regulators",32.3185,-102.7423
+Federal Waste Disposal Facility – WCS,"Federal Class A, B, C",Private,Federal Waste,"Principally federal LLW, but has separate authorized inventory for Texas Compact",32.3185,-102.7423

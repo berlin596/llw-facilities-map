@@ -1,0 +1,250 @@
+:root {
+  --ink: #17202a;
+  --muted: #52616b;
+  --paper: #f7f8f5;
+  --panel: #ffffff;
+  --line: #d7ddd8;
+  --marker: #b91c1c;
+  --highlight: #2d9c7f;
+  --highlight-line: #11624f;
+  --shadow: 0 16px 38px rgba(32, 42, 53, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-banner {
+  background: #17324d;
+  color: #ffffff;
+  padding: clamp(1rem, 2.6vw, 1.9rem) clamp(1rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.site-banner h1 {
+  max-width: 1180px;
+  margin: 0 auto;
+  font-size: clamp(1.45rem, 3vw, 2.6rem);
+  line-height: 1.12;
+  font-weight: 750;
+}
+
+.map-shell {
+  width: min(100%, 1320px);
+  margin: 0 auto;
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.map-panel {
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  height: calc(100vh - 190px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+}
+
+.legend {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 500;
+  width: min(265px, calc(100% - 2rem));
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(23, 50, 77, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 24px rgba(23, 32, 42, 0.17);
+  color: var(--ink);
+}
+
+.legend h2 {
+  margin: 0 0 0.65rem;
+  font-size: 0.95rem;
+}
+
+.legend-row {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 0.6rem;
+  align-items: center;
+  min-height: 28px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.25;
+}
+
+.legend-marker {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 3px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: var(--marker);
+  box-shadow: 0 0 0 2px rgba(185, 28, 28, 0.38);
+}
+
+.legend-highlight {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  border: 2px solid var(--highlight-line);
+  background: rgba(45, 156, 127, 0.38);
+}
+
+.selection-summary {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: clamp(0.92rem, 1.7vw, 1rem);
+  line-height: 1.45;
+}
+
+.leaflet-popup-content {
+  margin: 0.85rem 1rem;
+  min-width: 220px;
+}
+
+.popup-title {
+  margin: 0 0 0.55rem;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.popup-group {
+  display: grid;
+  gap: 0.75rem;
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 0.15rem;
+}
+
+.popup-facility {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.popup-facility:first-of-type {
+  border-top: 0;
+}
+
+.popup-facility.is-active {
+  border-left: 4px solid var(--highlight-line);
+  padding-left: 0.6rem;
+}
+
+.popup-facility-heading {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.6rem;
+  align-items: start;
+}
+
+.popup-facility-name {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.96rem;
+  line-height: 1.25;
+}
+
+.popup-facility-action {
+  min-width: 76px;
+  min-height: 32px;
+  border: 1px solid #17324d;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #17324d;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.popup-facility-action.is-active {
+  background: #17324d;
+  color: #ffffff;
+}
+
+.popup-list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 0.7rem;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.popup-list dt {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.popup-list dd {
+  margin: 0;
+  color: var(--ink);
+}
+
+@media (max-width: 720px) {
+  .map-shell {
+    padding: 0.6rem;
+  }
+
+  .map-panel,
+  #map {
+    min-height: 500px;
+  }
+
+  .map-panel {
+    height: calc(100vh - 215px);
+  }
+
+  .legend {
+    right: 0.6rem;
+    bottom: 0.6rem;
+    padding: 0.75rem 0.85rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-banner h1 {
+    font-size: 1.25rem;
+  }
+
+  .map-panel,
+  #map {
+    min-height: 470px;
+  }
+
+  .legend {
+    position: static;
+    width: 100%;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

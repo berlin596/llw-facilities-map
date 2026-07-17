@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Active LLW Disposal Options in the United States</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-banner">
+      <h1>
+        The United States has only a small number of active LLW disposal options,
+        and not all are available to every generator
+      </h1>
+    </header>
+
+    <main class="map-shell" aria-label="Interactive LLW disposal facility map">
+      <section class="map-panel">
+        <div id="map" aria-label="Map of United States LLW disposal facilities"></div>
+
+        <aside class="legend" aria-label="Map legend">
+          <h2>Legend</h2>
+          <div class="legend-row">
+            <span class="legend-marker" aria-hidden="true"></span>
+            <span>LLW disposal facility</span>
+          </div>
+          <div class="legend-row">
+            <span class="legend-highlight" aria-hidden="true"></span>
+            <span>States eligible to ship waste</span>
+          </div>
+        </aside>
+      </section>
+
+      <p id="selection-summary" class="selection-summary" aria-live="polite">
+        Select a facility marker to see where it can accept waste.
+      </p>
+
+      <section class="facility-timeline-section" aria-labelledby="facility-timeline-heading">
+        <div class="timeline-header">
+          <h2 id="facility-timeline-heading">Facility Timeline</h2>
+          <div class="timeline-controls" aria-label="Timeline scroll controls">
+            <button class="timeline-arrow" type="button" data-timeline-scroll="left" aria-label="Scroll timeline left">‹</button>
+            <button class="timeline-arrow" type="button" data-timeline-scroll="right" aria-label="Scroll timeline right">›</button>
+          </div>
+        </div>
+        <div class="timeline-scroll" id="facility-timeline" tabindex="0" aria-label="Scrollable facility timeline"></div>
+      </section>
+
+      <section class="citations" aria-labelledby="citations-heading">
+        <h2 id="citations-heading">Citations</h2>
+        <ul>
+          <li><a href="https://www.nrc.gov/docs/ML1219/ML12194A604.pdf" target="_blank" rel="noopener noreferrer">Nevada National Security Site Waste Acceptance Criteria</a></li>
+          <li><a href="https://www.nrc.gov/waste/llw-disposal/licensing/locations.html" target="_blank" rel="noopener noreferrer">U.S. Nuclear Regulatory Commission (NRC) - Commercial Low-Level Waste Disposal Facilities</a></li>
+          <li><a href="https://des.sc.gov/community/environmental-sites-projects/pollution-advisories-monitoring/chem-nuclear-site-barnwell-county-south-carolina" target="_blank" rel="noopener noreferrer">South Carolina Department of Environmental Services - Chem-Nuclear Site (Barnwell)</a></li>
+          <li><a href="https://doh.wa.gov/community-and-environment/radiation/waste-management/commercial-low-level-radioactive-waste-disposal/fact-sheet" target="_blank" rel="noopener noreferrer">Washington State Department of Health - Commercial Low-Level Radioactive Waste Disposal Facility (Richland)</a></li>
+          <li><a href="https://rmpb.org/rocky-mountain-low-level-radioactive-waste-board/" target="_blank" rel="noopener noreferrer">Rocky Mountain Low-Level Radioactive Waste Compact</a></li>
+          <li><a href="https://deq.utah.gov/businesses-facilities/low-level-radioactive-waste-energysolutions" target="_blank" rel="noopener noreferrer">Utah Department of Environmental Quality - EnergySolutions Clive Facility</a></li>
+          <li><a href="https://www.energysolutions.com/clive/" target="_blank" rel="noopener noreferrer">EnergySolutions Clive Operations Facility</a></li>
+          <li><a href="https://nnss.gov/mission/environmental-programs/radioactive-waste-management/" target="_blank" rel="noopener noreferrer">Nevada National Security Site - Radioactive Waste Management (Area 5 RWMC)</a></li>
+          <li><a href="https://www.energy.gov/ea/articles/office-enterprise-assessments-assessment-savannah-river-site-radioactive-waste-disposal" target="_blank" rel="noopener noreferrer">U.S. Department of Energy, Office of Enterprise Assessments - Assessment of Savannah River Site Radioactive Waste Disposal Facilities</a></li>
+          <li><a href="https://www.osti.gov/biblio/2335484" target="_blank" rel="noopener noreferrer">OSTI - E-Area Low-Level Waste Facility Performance Assessment and Disposal Operations</a></li>
+          <li><a href="https://www.tceq.texas.gov/permitting/radmat/licensing/wcs_license_app.html" target="_blank" rel="noopener noreferrer">Texas Commission on Environmental Quality (TCEQ) - Waste Control Specialists Licensing</a></li>
+          <li><a href="https://www.tceq.texas.gov/permitting/radmat/licensing/generator-site-access/" target="_blank" rel="noopener noreferrer">TCEQ - Generator Site Access to the Texas Compact Waste Disposal Facility</a></li>
+          <li><a href="https://www.tceq.texas.gov/downloads/permitting/radioactive-materials/licensing/license_r04100_amend_43.pdf" target="_blank" rel="noopener noreferrer">TCEQ Radioactive Material License R04100 (current amended license)</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
